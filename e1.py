@@ -45,7 +45,6 @@ for lista in rangos_M:
 for i in range(len(instancias)):
     print("-"*10)
     print("Instancia ", i+1,)
-    printear_instancia(instancias[0])
+    printear_instancia(instancias[i])
     print("-"*10)
 print("-"*10)
-
