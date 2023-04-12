@@ -9,13 +9,12 @@ random.seed(datetime.now().timestamp())
 
 class instancia:
     def __init__(self, M, L, default):
-        self.D = default*random.randint(1, L) 
-        self.C = default*random.randint(1, L) 
-        self.K = default*random.randint(1, L) 
+        self.D = default*random.randint(1, L) # demanda en mes i 
+        self.C = default*random.randint(1, L) # precio produccion normal 
+        self.K = default*random.randint(1, L) # precio produccion extra
         self.A = random.randint(1000,2000) # capacidad max almacen
         self.P = random.randint(1, L) # precio unitario mensual almacen
         self.N = random.randint(1, L) # produccion max normal
-        self.E = 0.01*self.N*random.randint(0, 50) # produccion max extra 
 
 def crear_instancia(M):
     L = 100 # fija el limite de la variacion de costos y demandas
@@ -29,7 +28,6 @@ def printear_instancia(inst):
     print("A: ", inst.A)
     print("P: ", inst.P)
     print("N: ", inst.N)
-    print("E: ", inst.E)
 
 M_p =[[5, 10], [10, 20], [20, 30], [30, 40], [40, 50]]
 M_m =[[100, 130], [130, 160], [160, 180], [170, 190], [190, 200]]
